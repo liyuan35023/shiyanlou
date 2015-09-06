@@ -19,8 +19,10 @@ int main()
 	{
 		shiyanlou_course[i].reset(id[i],name[i]);
 	}
+
 	vector<Course>::iterator it;
 	vector<Course>::iterator it_max;
+	
 	int number;   //number代表命令
 	cout << "实验楼管理程序beta1.0" << endl;
 	cout << "请输入数字0-5进行管理，输入0获取命令的详细作用：";
