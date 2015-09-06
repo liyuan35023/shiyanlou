@@ -6,8 +6,8 @@
 #include <iostream>
 #include <string>
 #include "shiyanlouadmin.h"
-
 using namespace std;
+
 /*默认构造函数*/
 Course::Course()
 {
@@ -19,11 +19,11 @@ Course::Course(int n, string name)
 	course_id = n;
 	course_name = name;
 }
-Course::~Course()
+/*Course::~Course()
 {
 	cout << "实验楼管理程序运行完毕，bye~~~~" << endl;
 	cin.get();
-}
+}*/
 void Course::print()
 {
 	cout << "课程名称:" << course_name << ",";
@@ -32,4 +32,9 @@ void Course::print()
 int Course::get_namesize()
 {
 	return course_name.size();
+}
+void Course::reset(int n,string name)
+{
+	course_id=n;
+	course_name=name;
 }

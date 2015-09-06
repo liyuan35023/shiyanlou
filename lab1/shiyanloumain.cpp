@@ -2,7 +2,6 @@
 //2015/9/5
 //shiyanloumain.cpp---实验楼管理程序主函数
 //
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -11,13 +10,14 @@
 int main()
 {
 	using namespace std;
-
+	
 	int id[7] = { 1, 2, 3, 4, 5, 6, 7 };
 	string name[7] = { "Linux", "C++", "HTML", "HTML5", "NodeJS", "Shell", "Python" };
-	vector<Course> shiyanlou_course{ 7 };
-	for (int i = 0; i<7; i++)
+	vector<Course> shiyanlou_course(7);
+	int i;
+	for (i=0;i<7;++i)
 	{
-		Course shiyanlou_course[i](id[i], name[i]);
+		shiyanlou_course[i].reset(id[i],name[i]);
 	}
 	vector<Course>::iterator it;
 	vector<Course>::iterator it_max;
@@ -71,6 +71,9 @@ int main()
 			}
 			else
 			{
+				it=shiyanlou_course.end()-1;
+				cout<<"删除";
+				it->print();
 				shiyanlou_course.pop_back();
 			}
 		}
@@ -82,6 +85,7 @@ int main()
 		{
 			cout << "请输入数字0-5:";
 		}
+		cout << "请输入数字0-5进行管理，输入0获取命令的详细作用：";
 	}
 	return 0;
 }
