@@ -14,6 +14,7 @@ Course::Course()
 	course_name = "shiyanlou";
 	course_id = 0;
 }
+/*构造函数*/
 Course::Course(int n, string name)
 {
 	course_id = n;
