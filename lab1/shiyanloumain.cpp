@@ -53,10 +53,10 @@ int main()
 		{
 			cout << "名字最长的课程为：" << endl;
 				//vector<int> namesize;
+			int max_size = 0;
 			for (it = shiyanlou_course.begin(); it != shiyanlou_course.end(); ++it)
 			{
 				//namesize.push_back(it->get_namesize());
-				int max_size = 0;
 				if (it->get_namesize()>max_size)
 				{
 					max_size = it->get_namesize();
