@@ -60,10 +60,13 @@ int main()
 				if (it->get_namesize()>max_size)
 				{
 					max_size = it->get_namesize();
-					it_max = it;
 				}
 			}
-			it_max->print();
+			for (it_max = shiyanlou_course.begin(); it_max != shiyanlou_course.end(); ++it_max)
+			{
+			    if(it_max->get_namesize()==max_size)
+			        it_max->print();
+			}
 		}
 		else if (number == 4)
 		{

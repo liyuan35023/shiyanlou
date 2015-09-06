@@ -24,15 +24,21 @@ Course::Course(int n, string name)
 	cout << "实验楼管理程序运行完毕，bye~~~~" << endl;
 	cin.get();
 }*/
+
+/*打印课程名称与课程id*/
 void Course::print()
 {
 	cout << "课程名称:" << course_name << ",";
 	cout << "课程id:" << course_id << endl;
 }
+
+/*返回课程名称的长度*/
 int Course::get_namesize()
 {
 	return course_name.size();
 }
+
+/*重新设置课程名称与课程id*/
 void Course::reset(int n,string name)
 {
 	course_id=n;
