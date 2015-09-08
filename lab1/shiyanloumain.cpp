@@ -20,7 +20,7 @@ int main()
 		shiyanlou_course[i].reset(id[i],name[i]);
 	}
 
-	vector<Course>::iterator it;
+	//vector<Course>::iterator it;
 	vector<Course>::iterator it_max;
 	
 	int number;   //number代表命令
@@ -54,8 +54,8 @@ int main()
 			cout << "名字最长的课程为：" << endl;
 				//vector<int> namesize;
 			int max_size = 0;
-			for (it = shiyanlou_course.begin(); it != shiyanlou_course.end(); ++it)
-			//for (auto it = shiyanlou_course.begin(); it != shiyanlou_course.end(); ++it)
+			//for (it = shiyanlou_course.begin(); it != shiyanlou_course.end(); ++it)
+			for (auto it = shiyanlou_course.begin(); it != shiyanlou_course.end(); ++it)
 			{
 				//namesize.push_back(it->get_namesize());
 				if (it->get_namesize()>max_size)
